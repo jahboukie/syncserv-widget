@@ -4,7 +4,7 @@ function App() {
   const [xaiResponse, setXaiResponse] = useState('');
 
   useEffect(() => {
-    fetch('http://localhost:3001/xai')
+    fetch('https://syncserv-backend.vercel.app/xai') // Updated to Vercel backend
       .then((res) => res.json())
       .then((data) => setXaiResponse(data.message))
       .catch((err) => setXaiResponse('Error fetching xAI'));
@@ -18,4 +18,3 @@ function App() {
 }
 
 export default App;
-
