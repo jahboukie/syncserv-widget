@@ -58,5 +58,10 @@ function App() {
     </div>
   );
 }
+fetch('https://syncserv-backend.vercel.app/xai', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({ prompt: 'Hello, how are you?' }),
+});
 
 export default App;
